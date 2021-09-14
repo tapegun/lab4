@@ -1,4 +1,4 @@
-module 4bit_rp 
+module fourbit_rp 
 	(input [3:0] A,B,
 	 input cin,
 	 output logic [3:0] S,
