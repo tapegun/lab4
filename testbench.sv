@@ -9,7 +9,8 @@ module testbench();
 	logic CO_RC;
 	
 	
-	ripple_adder 				 RA(.A(A), .B(B), .Sum(Sum_RC),  .CO(CO_RC));
+	
+	ripple_adder RA (.A(A), .B(B), .Sum(Sum_RC),  .CO(CO_RC));
 		
 	//Begin the testing
 	initial begin
