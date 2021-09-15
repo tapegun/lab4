@@ -17,7 +17,7 @@ module ripple_adder
 	  //(4bit_rp) inputs: A[3:0] B[3:0] cin outputs: S C
 	  fourbit_rp rp1 (.A(A[3:0]), .B(B[3:0]), .cin(cin), .S(S[3:0]), .cout(C0));
 	  fourbit_rp rp2 (.A(A[7:4]), .B(B[7:4]), .cin(c0), .S(S[7:4]), .cout(C1));
-	  fourbit_rp rp3 (.A(A[11:8]), .B(B[11:8]), .cin(c1), .S(S[7:4]), .cout(C2));
-	  fourbit_rp rp4 (.A(A[15:12]), .B(B[15:12]), .cin(c2), .S(S[3:0]), .cout(cout));
+	  fourbit_rp rp3 (.A(A[11:8]), .B(B[11:8]), .cin(c1), .S(S[11:8]), .cout(C2));
+	  fourbit_rp rp4 (.A(A[15:12]), .B(B[15:12]), .cin(c2), .S(S[15:12]), .cout(cout));
      
 endmodule
