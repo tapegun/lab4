@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Wed Sep 15 00:55:38 2021
+Wed Sep 15 01:25:23 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,8 +10,14 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp3"
+  6. Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp2"
+  7. Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp1|full_adder:f1"
+  8. Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp1"
+  9. Port Connectivity Checks: "ripple_adder:adder"
+ 10. Port Connectivity Checks: "router:route"
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -37,7 +43,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Sep 15 00:55:38 2021           ;
+; Analysis & Synthesis Status        ; Failed - Wed Sep 15 01:25:23 2021           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4                                        ;
 ; Top-level Entity Name              ; adder2                                      ;
@@ -158,13 +164,67 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp3"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp2"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp1|full_adder:f1"                                    ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; C    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder|fourbit_rp:rp1"                                                  ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "ripple_adder:adder" ;
++------+-------+----------+----------------------+
+; Port ; Type  ; Severity ; Details              ;
++------+-------+----------+----------------------+
+; cin  ; Input ; Info     ; Stuck at GND         ;
++------+-------+----------+----------------------+
+
+
++------------------------------------------------+
+; Port Connectivity Checks: "router:route"       ;
++--------------+-------+----------+--------------+
+; Port         ; Type  ; Severity ; Details      ;
++--------------+-------+----------+--------------+
+; A_In[15..10] ; Input ; Info     ; Stuck at GND ;
++--------------+-------+----------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 15 00:55:14 2021
+    Info: Processing started: Wed Sep 15 01:24:58 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
@@ -172,19 +232,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file fourbit
     Info (12023): Found entity 1: fourbit_rp File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
     Info (12023): Found entity 1: testbench File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/testbench.sv Line: 1
-Error (10170): Verilog HDL syntax error at fourbit_la.sv(18) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 18
-Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(18): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 18
-Error (10170): Verilog HDL syntax error at fourbit_la.sv(19) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 19
-Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(19): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 19
-Error (10170): Verilog HDL syntax error at fourbit_la.sv(20) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 20
-Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(20): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 20
-Error (10170): Verilog HDL syntax error at fourbit_la.sv(21) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 21
-Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(21): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 21
-Error (10170): Verilog HDL syntax error at fourbit_la.sv(26) near text: "assign";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 26
-Info (12021): Found 0 design units, including 0 entities, in source file fourbit_la.sv
-Error (10170): Verilog HDL syntax error at full_adder_la.sv(3) near text: "output";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder_la.sv Line: 3
-Error (10112): Ignored design unit "full_adder_la" at full_adder_la.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder_la.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file full_adder_la.sv
+Info (12021): Found 1 design units, including 1 entities, in source file fourbit_la.sv
+    Info (12023): Found entity 1: fourbit_la File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file full_adder_la.sv
+    Info (12023): Found entity 1: full_adder_la File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder_la.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file select_adder.sv
     Info (12023): Found entity 1: select_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/select_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router.sv
@@ -193,10 +244,8 @@ Info (12021): Found 1 design units, including 1 entities, in source file ripple_
     Info (12023): Found entity 1: ripple_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_17.sv
     Info (12023): Found entity 1: reg_17 File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/reg_17.sv Line: 1
-Error (10170): Verilog HDL syntax error at lookahead_adder.sv(26) near text: "=";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
-Error (10170): Verilog HDL syntax error at lookahead_adder.sv(26) near text: "}";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
-Error (10112): Ignored design unit "lookahead_adder" at lookahead_adder.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file lookahead_adder.sv
+Info (12021): Found 1 design units, including 1 entities, in source file lookahead_adder.sv
+    Info (12023): Found entity 1: lookahead_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
     Info (12023): Found entity 1: HexDriver File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file control.sv
@@ -205,12 +254,49 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder2.
     Info (12023): Found entity 1: adder2 File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder.sv Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at fourbit_rp.sv(11): created implicit net for "co" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at ripple_adder.sv(18): created implicit net for "C0" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at ripple_adder.sv(19): created implicit net for "C1" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 19
+Warning (10236): Verilog HDL Implicit Net warning at ripple_adder.sv(20): created implicit net for "C2" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 20
+Info (12127): Elaborating entity "adder2" for the top level hierarchy
+Info (12128): Elaborating entity "control" for hierarchy "control:run_once" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 30
+Info (12128): Elaborating entity "router" for hierarchy "router:route" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 33
+Info (12128): Elaborating entity "reg_17" for hierarchy "reg_17:reg_unit" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 36
+Info (12128): Elaborating entity "ripple_adder" for hierarchy "ripple_adder:adder" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 40
+Warning (10034): Output port "S[15..8]" at ripple_adder.sv(5) has no driver File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+Info (12128): Elaborating entity "fourbit_rp" for hierarchy "ripple_adder:adder|fourbit_rp:rp1" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 18
+Info (12128): Elaborating entity "full_adder" for hierarchy "ripple_adder:adder|fourbit_rp:rp1|full_adder:f1" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 10
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:AHex0" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/adder2.sv Line: 50
+Error (12014): Net "ripple_adder:adder|S[7]", which fans out to "ripple_adder:adder|S[7]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp2|S[3]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp3|S[3]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[6]", which fans out to "ripple_adder:adder|S[6]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp2|S[2]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp3|S[2]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[5]", which fans out to "ripple_adder:adder|S[5]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp2|S[1]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp3|S[1]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[4]", which fans out to "ripple_adder:adder|S[4]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp2|S[0]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp3|S[0]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[3]", which fans out to "ripple_adder:adder|S[3]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp1|S[3]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp4|S[3]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[2]", which fans out to "ripple_adder:adder|S[2]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp1|S[2]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp4|S[2]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[1]", which fans out to "ripple_adder:adder|S[1]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp1|S[1]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp4|S[1]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+Error (12014): Net "ripple_adder:adder|S[0]", which fans out to "ripple_adder:adder|S[0]", cannot be assigned more than one value File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 5
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp1|S[0]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
+    Error (12015): Net is fed by "ripple_adder:adder|fourbit_rp:rp4|S[0]" File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 4
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/output_files/lab4.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 14 errors, 1 warning
-    Error: Peak virtual memory: 4700 megabytes
-    Error: Processing ended: Wed Sep 15 00:55:38 2021
-    Error: Elapsed time: 00:00:24
-    Error: Total CPU time (on all processors): 00:00:59
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 24 errors, 6 warnings
+    Error: Peak virtual memory: 4706 megabytes
+    Error: Processing ended: Wed Sep 15 01:25:23 2021
+    Error: Elapsed time: 00:00:25
+    Error: Total CPU time (on all processors): 00:01:00
 
 
 +------------------------------------------+
