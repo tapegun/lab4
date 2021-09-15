@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Wed Sep 15 01:36:57 2021
+Wed Sep 15 01:51:44 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -51,7 +51,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Sep 15 01:36:57 2021       ;
+; Analysis & Synthesis Status        ; Successful - Wed Sep 15 01:51:44 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4                                        ;
 ; Top-level Entity Name              ; adder2                                      ;
@@ -383,10 +383,12 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 15 01:36:30 2021
+    Info: Processing started: Wed Sep 15 01:51:17 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file two_to_one_mux.sv
+    Info (12023): Found entity 1: two_to_one_mux File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/two_to_one_mux.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file fourbit_rp.sv
     Info (12023): Found entity 1: fourbit_rp File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
@@ -452,9 +454,9 @@ Info (21057): Implemented 117 device resources after synthesis - the final resou
     Info (21061): Implemented 52 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 4828 megabytes
-    Info: Processing ended: Wed Sep 15 01:36:57 2021
+    Info: Processing ended: Wed Sep 15 01:51:44 2021
     Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:01:02
+    Info: Total CPU time (on all processors): 00:01:04
 
 
 +------------------------------------------+
