@@ -17,10 +17,12 @@ module testbench();
 	
 		A = 16'h3333;
 		B = 16'h4444;
+		$display(Sum_RC); 
 		
 		#30
 		A = 16'h1111;
 		B = 16'h2222;
+		$display(Sum_RC); 
 		
 	end
 	
