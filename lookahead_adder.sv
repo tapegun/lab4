@@ -23,6 +23,6 @@ module lookahead_adder (
 	  assign c12 = GG8 | (GG4 & PG8) | (GG0 & PG8 & PG4) | (cin & PG4 & PG0);
 	  fourbit_la fbla4 (.cin(c12), .A(A[15:12]), .B(B[15:12]), .S(s_3), .P(PG12), .G(GG12), .cout(cout));
 	  
-	  S = {s3, s2, s1, s0};
+	  S = {s_3, s_2, s_1, s_0};
 
 endmodule
