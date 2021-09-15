@@ -1,15 +1,16 @@
 module two_to_one_mux (
-	input [1:0] Din,
-	input sel,
-	output logic Dout);
+	input logic [3:0] A,
+	input logic [3:0] B,
+	input logic sel,
+	output logic [3:0] Out);
 	
 	always_comb
 	
 	begin
 		if(sel == 0)
-			Dout = Din[0];
+			assign Out = B;
 		else
-			Dout = Din[3];
+			assign Out = A;
 			
 	end
 
