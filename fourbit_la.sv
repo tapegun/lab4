@@ -15,10 +15,10 @@ module fourbit_la(
 	assign C[2] = (Cin&P[0]&P[1])|(G[0]& P[1])|G[1];
 	assign C[3] = (Cin&P[0]&P[1]&P[2])|(G[0]&P[1]&P[2])|(G[1]&P[2])|G[2];
 
-	full_adder_la rp1 (.A(A[0]), .B(B[0]), .cin(C[0]), .S(S[0]), .C(), .P[0], .G[0]);
-	full_adder_la rp1 (.A(A[1]), .B(B[1]), .cin(C[1]), .S(S[1]), .C(), .P[1], .G[1]);
-	full_adder_la rp1 (.A(A[2]), .B(B[2]), .cin(C[2]), .S(S[2]), .C(), .P[2], .G[2]);
-	full_adder_la rp1 (.A(A[3]), .B(B[3]), .cin(C[3]), .S(S[3]), .C(), .P[3], .G[3]);
+	full_adder_la la1 (.A(A[0]), .B(B[0]), .Cin(C[0]), .S(Sum[0]), .C(), P(.P[0]), G(.G[0]));
+	full_adder_la la2 (.A(A[1]), .B(B[1]), .Cin(C[1]), .S(Sum[1]), .C(), P(.P[1]), G(.G[1]));
+	full_adder_la la3 (.A(A[2]), .B(B[2]), .Cin(C[2]), .S(Sum[2]), .C(), P(.P[2]), G(.G[2]));
+	full_adder_la la4 (.A(A[3]), .B(B[3]), .Cin(C[3]), .S(Sum[3]), .C(), P(.P[3]), G(.G[3]));
 	
 	assign Cout = (Cin & P[0] & P[1] & P[2] & P[3]) | (G[0] & P[1] & P[2] & P[3]) | (G[1] & P[2] & P[3]) | (G[2] & P[3]) | G[3];
 	

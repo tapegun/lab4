@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lab4
-Wed Sep 15 00:32:58 2021
+Wed Sep 15 00:55:38 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Sep 15 00:32:58 2021           ;
+; Analysis & Synthesis Status        ; Failed - Wed Sep 15 00:55:38 2021           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lab4                                        ;
 ; Top-level Entity Name              ; adder2                                      ;
@@ -164,34 +164,38 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Sep 15 00:32:34 2021
+    Info: Processing started: Wed Sep 15 00:55:14 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lab4 -c lab4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Error (10170): Verilog HDL syntax error at 4bit_rp.sv(10) near text: ".";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/4bit_rp.sv Line: 10
-Error (10170): Verilog HDL syntax error at 4bit_rp.sv(11) near text: ".";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/4bit_rp.sv Line: 11
-Error (10170): Verilog HDL syntax error at 4bit_rp.sv(12) near text: ".";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/4bit_rp.sv Line: 12
-Error (10170): Verilog HDL syntax error at 4bit_rp.sv(13) near text: ".";  expecting an operand. Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/4bit_rp.sv Line: 13
-Error (10112): Ignored design unit "fourbit_rp" at 4bit_rp.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/4bit_rp.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file 4bit_rp.sv
+Info (12021): Found 1 design units, including 1 entities, in source file fourbit_rp.sv
+    Info (12023): Found entity 1: fourbit_rp File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_rp.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/testbench.sv Line: 1
+Error (10170): Verilog HDL syntax error at fourbit_la.sv(18) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 18
+Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(18): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 18
+Error (10170): Verilog HDL syntax error at fourbit_la.sv(19) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 19
+Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(19): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 19
+Error (10170): Verilog HDL syntax error at fourbit_la.sv(20) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 20
+Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(20): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 20
+Error (10170): Verilog HDL syntax error at fourbit_la.sv(21) near text: "[";  expecting "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 21
+Error (10267): Verilog HDL Module Instantiation error at fourbit_la.sv(21): cannot connect instance ports both by order and by name File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 21
+Error (10170): Verilog HDL syntax error at fourbit_la.sv(26) near text: "assign";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/fourbit_la.sv Line: 26
+Info (12021): Found 0 design units, including 0 entities, in source file fourbit_la.sv
+Error (10170): Verilog HDL syntax error at full_adder_la.sv(3) near text: "output";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder_la.sv Line: 3
+Error (10112): Ignored design unit "full_adder_la" at full_adder_la.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder_la.sv Line: 1
+Info (12021): Found 0 design units, including 0 entities, in source file full_adder_la.sv
 Info (12021): Found 1 design units, including 1 entities, in source file select_adder.sv
     Info (12023): Found entity 1: select_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/select_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file router.sv
     Info (12023): Found entity 1: router File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/router.sv Line: 1
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(18) near text: ";";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 18
-Error (10170): Verilog HDL syntax error at ripple_adder.sv(20) near text: ";";  expecting ")". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 20
-Error (10112): Ignored design unit "ripple_adder" at ripple_adder.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
-Info (12021): Found 0 design units, including 0 entities, in source file ripple_adder.sv
+Info (12021): Found 1 design units, including 1 entities, in source file ripple_adder.sv
+    Info (12023): Found entity 1: ripple_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/ripple_adder.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file reg_17.sv
     Info (12023): Found entity 1: reg_17 File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/reg_17.sv Line: 1
-Error (10170): Verilog HDL syntax error at lookahead_adder.sv(19) near text: "=";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 19
-Error (10170): Verilog HDL syntax error at lookahead_adder.sv(21) near text: "=";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 21
-Error (10170): Verilog HDL syntax error at lookahead_adder.sv(23) near text: "=";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 23
 Error (10170): Verilog HDL syntax error at lookahead_adder.sv(26) near text: "=";  expecting ".", or "(". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
-Error (10149): Verilog HDL Declaration error at lookahead_adder.sv(26): identifier "s2" is already declared in the present scope File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
-Error (10149): Verilog HDL Declaration error at lookahead_adder.sv(26): identifier "s1" is already declared in the present scope File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
-Error (10149): Verilog HDL Declaration error at lookahead_adder.sv(26): identifier "s0" is already declared in the present scope File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
 Error (10170): Verilog HDL syntax error at lookahead_adder.sv(26) near text: "}";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 26
+Error (10112): Ignored design unit "lookahead_adder" at lookahead_adder.sv(1) due to previous errors File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/lookahead_adder.sv Line: 1
 Info (12021): Found 0 design units, including 0 entities, in source file lookahead_adder.sv
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
     Info (12023): Found entity 1: HexDriver File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/HexDriver.sv Line: 1
@@ -202,11 +206,11 @@ Info (12021): Found 1 design units, including 1 entities, in source file adder2.
 Info (12021): Found 1 design units, including 1 entities, in source file full_adder.sv
     Info (12023): Found entity 1: full_adder File: C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/full_adder.sv Line: 1
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/18.1/385_lab4_adders_provided_fa20/output_files/lab4.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 16 errors, 1 warning
-    Error: Peak virtual memory: 4699 megabytes
-    Error: Processing ended: Wed Sep 15 00:32:58 2021
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 14 errors, 1 warning
+    Error: Peak virtual memory: 4700 megabytes
+    Error: Processing ended: Wed Sep 15 00:55:38 2021
     Error: Elapsed time: 00:00:24
-    Error: Total CPU time (on all processors): 00:00:58
+    Error: Total CPU time (on all processors): 00:00:59
 
 
 +------------------------------------------+

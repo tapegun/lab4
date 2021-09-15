@@ -1,7 +1,6 @@
-module full_adder_la(
+module full_adder_la (
 	input logic A, B, Cin
-	output logic S, C, P, G
-);
+	output logic S, C, P, G);
 
 	assign S = A^B^Cin;
 	assign C = (A&B)|(A&Cin)|(B&Cin);
