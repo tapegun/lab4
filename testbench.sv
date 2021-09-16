@@ -26,50 +26,32 @@ initial begin: RIPPLE_ADDER
 Reset_Clear = 0;
 Run_Accumulate = 0;
 	
+#22 Reset_Clear = 1;
+
+//#22 Reset_Clear = 0;
+
+#60 Run_Accumulate = 1;
+
+#60 Run_Accumulate = 0;
+
+#2000 Run_Accumulate = 1;
+
+#60 Run_Accumulate = 0;
+
 //#22 Reset_Clear = 1;
 //
 //#22 Reset_Clear = 0;
-
-#22 Run_Accumulate = 1;
-
-#22 Run_Accumulate = 0;
-
-#22 Run_Accumulate = 1;
-
-#22 Run_Accumulate = 0;
-
-//#22 Reset_Clear = 1;
 //
-//#22 Reset_Clear = 0;
-
-#22 Run_Accumulate = 1;
-
-#22 Run_Accumulate = 0;
-
-#22 Run_Accumulate = 1;
-
-#22 Run_Accumulate = 0;
-	
-<<<<<<< HEAD
+//#2000 Run_Accumulate = 1;
+//
+//#60 Run_Accumulate = 0;
+//
+//#2000 Run_Accumulate = 1;
+//
+//#60 Run_Accumulate = 0;
 	
 	
-=======
 	
-	ripple_adder RA (.A(A), .B(B), .Sum(Sum_RC),  .CO(CO_RC));
-		
-	//Begin the testing
-	initial begin
-	
-	
-		A = 16'h3333;
-		B = 16'h4444;
-		$display(Sum_RC); 
-		
-		#30
-		A = 16'h1111;
-		B = 16'h2222;
-		$display(Sum_RC); 
->>>>>>> cd72b12243db2d3626ba75f4045ada2426ba1108
 		
 	end
 	

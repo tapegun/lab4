@@ -8,9 +8,11 @@ module two_to_one_mux (
 	
 	begin
 		if(sel == 0)
-			assign Out = B;
+			 Out[3:0] = B[3:0];
+			
+			
 		else
-			assign Out = A;
+			 Out[3:0] = A[3:0];
 			
 	end
 

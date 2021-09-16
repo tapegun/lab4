@@ -1,9 +1,9 @@
 module ripple_adder
 (
-	input  [15:0] A, B,
-	input         cin,
-	output [15:0] S,
-	output        cout
+	input logic  [15:0] A, B,
+	input logic        cin,
+	output logic [15:0] S,
+	output logic       cout
 );
 
     /* TODO
