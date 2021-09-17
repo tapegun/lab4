@@ -47,14 +47,14 @@ module adder2 ( input Clk, Reset_Clear, Run_Accumulate,
 
 		// Addition unit
 
-		//ripple_adder adder		(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//this one should work
+		ripple_adder adder		(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//this one should work
 		//ripple_adder adder		(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//dummy
 		
 		//lookahead_adder adderla	(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );
 //		lookahead_adder adderla	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//dummy
 		
+//select_adder adders	(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .Sum(S[15:0]) );//dummy
 //select_adder adders	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .Sum(S[15:0]) );//dummy
-select_adder adders	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .Sum(S[15:0]) );//dummy
 
 
 		// Hex units that display contents of SW and register R in hex
