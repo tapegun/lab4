@@ -1,6 +1,6 @@
 module fourbit_rp 
-	(input [3:0] A,B,
-	 input cin,
+	(input logic [3:0] A,B,
+	 input logic cin,
 	 output logic [3:0] S,
 	 output logic cout);
 	 

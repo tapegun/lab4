@@ -28,15 +28,15 @@ Run_Accumulate = 0;
 	
 #22 Reset_Clear = 1;
 
-//#22 Reset_Clear = 0;
+#22 Reset_Clear = 0;
 
 #60 Run_Accumulate = 1;
 
 #60 Run_Accumulate = 0;
 
-#2000 Run_Accumulate = 1;
-
-#60 Run_Accumulate = 0;
+//#2000 Run_Accumulate = 1;
+//
+//#60 Run_Accumulate = 0;
 
 //#22 Reset_Clear = 1;
 //

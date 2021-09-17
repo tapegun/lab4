@@ -6,8 +6,8 @@ module adder2 ( input Clk, Reset_Clear, Run_Accumulate,
 										 HEX2, 
 										 HEX3, 
 										 HEX4,
-										 HEX5,
-				output logic [16:0] OP1, Output, S_output, OP2//output added for test purposes, might have to be deleted
+										 HEX5
+				//,output logic [16:0] OP1, Output, S_output, OP2//output added for test purposes, might have to be deleted
 										 );
 
 		// Declare temporary values used by other modules
@@ -17,15 +17,15 @@ module adder2 ( input Clk, Reset_Clear, Run_Accumulate,
 		logic [16:0] S;
 		logic [16:0] extended_SW;
 		
-		//assign extended_SW = {6'b000000, SW}; //uncomment this when working with the fpga board
+		assign extended_SW = {6'b000000, SW}; //uncomment this when working with the fpga board
 		
 		//uncomment this block when working with the test bench
 
-		assign extended_SW = 16'h0003; 
-		assign OP1 = extended_SW;
-		assign Output = Out;
-		assign S_output = S;
-		assign OP2 = 16'h0003;
+//		assign extended_SW = 16'h0003; 
+//		assign OP1 = extended_SW;
+//		assign Output = Out;
+//		assign S_output = S;
+//		assign OP2 = 16'h0003;
 		//assign Out = 16'h0003;
 		
 		// Misc logic that inverts button presses and ORs the Load and Run signal
@@ -47,14 +47,14 @@ module adder2 ( input Clk, Reset_Clear, Run_Accumulate,
 
 		// Addition unit
 
-//		ripple_adder adder		(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//this one should work
-		ripple_adder adder		(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//dummy
+		//ripple_adder adder		(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//this one should work
+		//ripple_adder adder		(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//dummy
 		
 		//lookahead_adder adderla	(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );
 //		lookahead_adder adderla	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );//dummy
 		
-//		select_adder adders	(.A(extended_SW[15:0]), .B(Out[15:0]), .cin(1'b0), .cout(S[16]), .S(S[15:0]) );
 //select_adder adders	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .Sum(S[15:0]) );//dummy
+select_adder adders	(.A(extended_SW[15:0]), .B(OP2[15:0]), .cin(1'b0), .cout(S[16]), .Sum(S[15:0]) );//dummy
 
 
 		// Hex units that display contents of SW and register R in hex
