@@ -6,4 +6,4 @@ module full_adder(
 	assign S = A^B^Cin;
 	assign C = (A&B)|(A&Cin)|(B&Cin);
 
-endmodule
+endmodule 
