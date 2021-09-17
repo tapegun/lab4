@@ -4,7 +4,7 @@ module full_adder_la (
 
 	assign S = A^B^Cin;
 	assign C = (A&B)|(A&Cin)|(B&Cin);
-	assign P = A ^ B;
+	assign P = A ^ B;				// we will use P and G to determine the Cin of the next bit
 	assign G = A & B;
 
 endmodule

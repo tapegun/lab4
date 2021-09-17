@@ -10,7 +10,7 @@ module fourbit_la(
 	logic [3:0] G; // holds output of G for each FA
 	logic [3:0] P; // holds output of P for each FA
 
-	assign C[0] = Cin;
+	assign C[0] = Cin;																	// calculate the Cin based on Cin P and G
 	assign C[1] = (Cin&P[0])|G[0];
 	assign C[2] = (Cin&P[0]&P[1])|(G[0]& P[1])|G[1];
 	assign C[3] = (Cin&P[0]&P[1]&P[2])|(G[0]&P[1]&P[2])|(G[1]&P[2])|G[2];
@@ -20,10 +20,10 @@ module fourbit_la(
 	full_adder_la la3 (.A(A[2]), .B(B[2]), .Cin(C[2]), .S(Sum[2]), .C(), .P(P[2]), .G(G[2]));
 	full_adder_la la4 (.A(A[3]), .B(B[3]), .Cin(C[3]), .S(Sum[3]), .C(), .P(P[3]), .G(G[3]));
 	
-	assign Cout = (Cin & P[0] & P[1] & P[2] & P[3]) | (G[0] & P[1] & P[2] & P[3]) | (G[1] & P[2] & P[3]) | (G[2] & P[3]) | G[3];
+	assign Cout = (Cin & P[0] & P[1] & P[2] & P[3]) | (G[0] & P[1] & P[2] & P[3]) | (G[1] & P[2] & P[3]) | (G[2] & P[3]) | G[3];// for the last cout in the chain overall
 	
-	assign PG = P[0] & P[1] & P[2] & P[3];
-	assign GG = (G[3] | (G[2] & P[3]) | (G[1] & P[3] & P[2]) | (G[0] & P[3] & P[2] & P[1]));
+	assign PG = P[0] & P[1] & P[2] & P[3];																			// used to calculate the cin of the next fourbit_la unit
+	assign GG = (G[3] | (G[2] & P[3]) | (G[1] & P[3] & P[2]) | (G[0] & P[3] & P[2] & P[1]));		
 
 
 

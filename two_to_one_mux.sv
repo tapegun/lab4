@@ -7,7 +7,7 @@ module two_to_one_mux (
 	always_comb
 	
 	begin
-		if(sel == 0)
+		if(sel == 0)		// if select is 0 choose B otherwise choose A
 			 Out[3:0] = B[3:0];
 			
 			

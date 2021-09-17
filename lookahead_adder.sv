@@ -14,7 +14,7 @@ module lookahead_adder (
 	  logic GG0, GG4, GG8, GG12;
 	  
 	  // inputs: cin, A[3:0], B[3:0] outputs: s[3:0], cout, p, g
-	  fourbit_la fbla1 (.Cin(cin), .A(A[3:0]), .B(B[3:0]), .Sum(S[3:0]), .PG(PG0), .GG(GG0), .Cout());
+	  fourbit_la fbla1 (.Cin(cin), .A(A[3:0]), .B(B[3:0]), .Sum(S[3:0]), .PG(PG0), .GG(GG0), .Cout());//chain our 4 4bit adders together where we calculate the next Cin based on PG and GG
 	  assign c4 = GG0 | (cin & PG0); 
 	  fourbit_la fbla2 (.Cin(c4), .A(A[7:4]), .B(B[7:4]), .Sum(S[7:4]), .PG(PG4), .GG(GG4), .Cout());
 	  assign c8 = GG4 | (GG0 & PG4) |  (cin & PG0 & PG4);
